@@ -1,0 +1,34 @@
+{
+  "name": "zqj-pics2",
+  "version": "0.0.1",
+  "private": false,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "updateMD": "node actions.js",
+    "prepush": "npm version patch",
+    "push": "node push.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackchoumine/pics2.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.cjs"
+    }
+  },
+  "devDependencies": {
+    "husky": "^9.1.6"
+  }
+}

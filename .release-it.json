@@ -1,0 +1,40 @@
+{
+  "$schema": "https://unpkg.com/release-it/schema/release-it.json",
+  "github": {
+    "release": true
+  },
+  "git": {
+    "commitMessage": "release: v${version}"
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "infile": "CHANGELOG.md",
+      "ignoreRecommendedBump": true,
+      "strictSemVer": true,
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "✨新增功能"
+          },
+          {
+            "type": "fix",
+            "section": "🐛修复bug"
+          },
+          {
+            "type": "docs",
+            "section": "📚更新文档"
+          },
+          {
+            "type": "BREAKING CHANGE",
+            "section": "💥重大变更"
+          }
+        ]
+      }
+    }
+  }
+}
